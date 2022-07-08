@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black1"
+    tools:context=".patientActivity">
+
+    <TextView
+        android:id="@+id/firstPage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/login_patient_text"
+        android:textColor="#EDF6FF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_username_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        android:hint="@string/username"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/firstPage_text"
+        app:layout_constraintVertical_bias=".2"
+        >
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:fontFamily="sans-serif"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+        android:hint="@string/password"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/login_username_input"
+        app:layout_constraintVertical_bias=".2">
+
+        <EditText
+            android:id="@+id/login_password_input"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:autofillHints="password"
+            android:background="@color/white"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/patient_sign_in_button"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/password_layout"
+        app:layout_constraintVertical_bias=".25" />
+
+    <TextView
+        android:id="@+id/text_forSigningUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="@string/don_t_have_an_account"
+        android:textColor="#EDF6FF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/patient_sign_in_button"
+        app:layout_constraintVertical_bias=".3" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_forSigningUp"
+        app:layout_constraintVertical_bias=".3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="back Arrow"
+        android:onClick="backArrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/arrow_white"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
