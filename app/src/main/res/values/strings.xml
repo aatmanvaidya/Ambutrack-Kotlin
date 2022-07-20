@@ -9,4 +9,11 @@
     <string name="sign_in">SIGN IN</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">SIGN UP</string>
+    <string name="signup_patient_text">Sign Up</string>
+    <string name="name_register_page">Name</string>
+    <string name="gender">Gender</string>
+    <string name="male_radioButton">Male</string>
+    <string name="female_radioButton">Female</string>
+    <string name="non_binary_radioButton">Non-Binary</string>
+    <string name="blood_group_text">Blood Group</string>
 </resources>

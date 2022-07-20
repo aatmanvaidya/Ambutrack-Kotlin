@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         homePatient_button.setOnClickListener{
-            val intent = Intent(this, patientActivity::class.java)
+            val intent = Intent(this, PatientActivity::class.java)
             startActivity(intent)
         }
     }
