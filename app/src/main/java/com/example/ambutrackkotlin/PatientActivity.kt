@@ -22,6 +22,7 @@ class PatientActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+
         login_patient_signup.setOnClickListener {
             val intent = Intent(this, PatientActivitySignUp::class.java)
             startActivity(intent)
@@ -31,22 +32,23 @@ class PatientActivity : AppCompatActivity() {
     }
 
     private fun patientLoginIn() {
-        val email = findViewById<EditText>(R.id.login_username_input_EditText)
-        val password = findViewById<EditText>(R.id.login_password_input)
+//        val email = findViewById<EditText>(R.id.login_username_input_EditText)
+//        val password = findViewById<EditText>(R.id.login_password_input)
 
-        if (email.text.isEmpty() || password.text.isEmpty()) {
+        if (login_username_input_EditText.text.isEmpty() || login_password_input.text.isEmpty()) {
             Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val inputEmail = email.text.toString()
-        val inputPassword = password.text.toString()
+        val inputEmail = login_username_input_EditText.text.toString()
+        val inputPassword = login_password_input.text.toString()
 
         auth.signInWithEmailAndPassword(inputEmail, inputPassword)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
+                    startActivity(Intent(this, PatientHomePage::class.java))
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
